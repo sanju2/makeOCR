@@ -9,7 +9,9 @@ The source code for this is located in ./source. We merely use $ pyinstaller mak
 
 ## Installation
 ### Prerequisite
-You must first get a copy of Tesserect-OCR from UB Manheim here: https://github.com/UB-Mannheim/tesseract/wiki
+You must first get a copy of Tesserect-OCR from UB Manheim here: https://github.com/UB-Mannheim/tesseract/wiki. 
+You must store the Tesseract-OCR folder in C:\Program Files (x86)\ for the script to work.
+
 ### Installing makeOCR
 To install makeOCR, 
 1. download the zip file of this project.
