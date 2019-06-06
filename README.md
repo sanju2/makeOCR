@@ -6,6 +6,7 @@ Nothing. This script just accepts a drag n' drop png, jpg, jpeg, tiff image file
 
 ## Specification
 The source code for this is located in ./source. We merely use $ pyinstaller makeOCR.py to generate the makeOCR.exe executable.
+This script works with tesseract with no special parameters added. This means English is the default language, but you can change that at the source file.
 
 ## Installation
 ### Prerequisite
@@ -21,4 +22,4 @@ To install makeOCR,
 ### Using makeOCR
 Using makeOCR is simple. After creating a desktop shortcut to the executable described in step 3 of Installing makeOCR, simply drag and drop an image to the desktop shortcut and the image will be processed in the background.
 
-makeOCR can more than one multiple drag n' drop image file.
+makeOCR can take more than one multiple drag n' drop image file, so you can generate texts in bulk.
