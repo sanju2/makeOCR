@@ -2,7 +2,7 @@
 A simple python script for OCR processing using open source tool tesseract.
 
 ## What's special about this?
-Nothing. This script just accepts a drag n' drop png,jpg,jpeg,tiff image file, runs it in a background shell and the open source Tesseract-OCR tool will generate a text file, corresponding to the same filename of the image file, in the directory of the image file.
+Nothing. This script just accepts a drag n' drop png, jpg, jpeg, tiff image file, runs it in a background shell and the open source Tesseract-OCR tool will generate a text file, corresponding to the same filename of the image file, in the directory of the image file.
 
 ## Specification
 The source code for this is located in ./source. We merely use $ pyinstaller makeOCR.py to generate the makeOCR.exe executable.
