@@ -20,3 +20,5 @@ To install makeOCR,
 
 ### Using makeOCR
 Using makeOCR is simple. After creating a desktop shortcut to the executable described in step 3 of Installing makeOCR, simply drag and drop an image to the desktop shortcut and the image will be processed in the background.
+
+makeOCR can more than one multiple drag n' drop image file.
