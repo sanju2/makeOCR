@@ -1,7 +1,5 @@
 '''
-    author: pesi 
-    email: pesiii@outlook.com
-    date: June 6, 2019
+    Author: Pesi, pesi_taototo@outlook.com
     
     Description: This is a script that is meant to interact with
     a Tesseract-OCR build on Windows.
@@ -16,18 +14,22 @@ from os import path
 from sys import argv 
 import subprocess
 
-tesseract_filepath="C:\\Program Files (x86)\\Tesseract-OCR\\tesseract.exe"
-
+tesseract_folder="C:\\Program Files (x86)\\Tesseract-OCR\\"
+tesseract_exe="tesseract.exe"
 # check if Tesseract-OCR exist in Program Files (x86) directory
-T_exists = path.isfile(tesseract_filepath)
+T_exists = path.isdir(tesseract_folder)
 
 if T_exists:
     argc=len(argv)
    
     for i in range(1, argc):
         output = path.splitext(argv[i])[0]
-        subprocess.call([tesseract_filepath, argv[i], output])
-       
+        output = output+".txt"
+                
+        # - > is necessary because Tesseract line feeds at EOL rather than carriage returns + line feed
+        # necessary for Unix -> Windows conversion, we redirect the output to a file
+        #subprocess.call([tesseract_exe, argv[i], -, >, output])
+        subprocess.Popen(tesseract_exe + " " + argv[i] + " - >" + output, cwd='C:\\Program Files (x86)\\Tesseract-OCR\\', shell=True)
 
 else:
     print("ERROR: Tesseract-OCR folder does not exist in Program Files (x86)")
